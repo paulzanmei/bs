@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>晶科物流管理系统</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/css.css" />
+<link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css"/>
+<script type="text/javascript" src="js/jquery1.9.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/sdmenu.js"></script>
+<script type="text/javascript" src="js/laydate/laydate.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.all.js"></script>
+</head>
+
+<body>
+<div class="header">
+	 <div class="logo"><!-- <img  src="img/logo.png" /> --><div style="margin-top: 20px;font-size: 20px;margin-left: 10px;color:white;">上海顶亚国际物流有限公司</div></div>
+     
+				<div class="header-right">
+                <i class="icon-question-sign icon-white"></i> <a href="#">帮助</a> <i class="icon-off icon-white"></i> <a id="modal-973558" href="#modal-container-973558" role="button" data-toggle="modal">注销</a> <!-- <i class="icon-user icon-white"></i> <a href="#">开票员的工作平台</a> <i class="icon-envelope icon-white"></i> <a href="#">发送短信</a> -->
+                <div id="modal-container-973558" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:300px; margin-left:-150px; top:30%">
+				<div class="modal-header">
+					 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h3 id="myModalLabel">
+						注销系统
+					</h3>
+				</div>
+				<div class="modal-body">
+					<p>
+						您确定要注销退出系统吗？
+					</p>
+				</div>
+				<div class="modal-footer">
+					 <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button> <a class="btn btn-primary" style="line-height:20px;" href="登录.html" >确定退出</a>
+				</div>
+			</div>
+				</div>
+</div>
+<!-- 顶部 -->     
+            
+<div id="middle">
+     <div class="left">
+     
+     <script type="text/javascript">
+var myMenu;
+window.onload = function() {
+	myMenu = new SDMenu("my_menu");
+	myMenu.init();
+};
+</script>
+
+<div id="my_menu" class="sdmenu">
+	<div>
+		<span>发送邮件</span>
+		<a href="#">批量发送</a>
+		
+	</div>
+	<div class="collapsed">
+		<span>抓取邮箱</span>
+		<a href="#">统计</a>
+	</div>
+	
+
+</div>
+
+     </div>
+     <div class="Switch"></div>
+     <script type="text/javascript">
+	$(document).ready(function(e) {
+    $(".Switch").click(function(){
+	$(".left").toggle();
+	 
+		});
+});
+</script>
+
+     <div class="right"  id="mainFrame">
+     
+     <div class="right_cont">
+<ul class="breadcrumb">当前位置：
+  <a href="#">首页</a> <span class="divider">/</span>
+  <a href="#">发送邮件</a> <span class="divider">/</span>
+  批量发送
+</ul>
+   <div class="title_right"><strong>批量选择客户邮件发送</strong></div>  
+   
+   <div style="width: 400px;float: left;overflow: scroll;height: 440px;">
+   		<ul id="treeDemo" class="ztree"></ul>
+   </div>
+   
+   <div style="width:700px; margin-left: 415px;">
+       <!-- <table class="table table-bordered">
+         <tr>
+     <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">国家：</td>
+     <td width="23%">
+     	<select name="select3" id="select3" class=" span1-1">
+         <option>美国</option>
+       </select>
+      </td>
+     <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">城市：</td>
+     <td width="23%">
+		<select name="select3" id="select3" class=" span1-1">
+         <option>美国</option>
+       </select>
+	</td>
+     <td width="10%" align="right" nowrap="nowrap" bgcolor="#f1f1f1">公司：</td>
+     <td>
+     	<select name="select3" id="select3" class=" span1-1">
+         <option>美国</option>
+       </select>
+     </td>
+     </tr>
+       </table>
+       
+       <table  class="margin-bottom-20 table  no-border" >
+        <tr>
+     	<td class="text-center"><input type="button" value="查询" class="btn btn-info " style="width:80px;" /></td>
+     </tr>
+ </table> -->
+ 
+ <!-- <table  class="margin-bottom-20 table  no-border" >
+     <tr>
+       <td ><input type="button" value="添加" class="btn btn-info" style="width:80px;"  /></td>
+     </tr>
+   </table> -->
+   
+       <table class="table table-bordered table-hover table-striped">
+         <tbody>
+           <tr align="center">
+           	<!-- <td><input type="checkbox"></td> -->
+             <td><strong>国家</strong></td>
+             <td><strong>城市</strong></td>
+             <td><strong>公司名称</strong></td>
+             <td><strong>邮箱</strong></td>
+             <td><strong>名称</strong></td>
+           </tr>
+           <tr align="center">
+           	<!-- <td><input type="checkbox"></td> -->
+             <td>美国</td>
+             <td>美国</td>
+             <td>美国</td>
+             <td>5232522@qq.com</td>
+             <td>5232522</td>
+           </tr>
+         </tbody>
+       </table>
+       
+       
+   
+   
+   
+   </div>
+     
+     
+     </div>     
+     </div>
+    </div>
+    
+<!-- 底部 -->
+<div id="footer">版权所有：晶科客流 &copy; 2015&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mycodes.net/" target="_blank">源码之家</a></div>
+    
+    
+
+ <script>
+!function(){
+laydate.skin('molv');
+laydate({elem: '#Calendar'});
+}();
+ 
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+   var zTreeObj;
+   // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+   var setting = {
+			check: {
+				enable: true
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+   // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+   var zNodes = [
+   {id:1, pId:0,name:"美国", open:true, children:[
+      {id:2, pId:1,name:"美国城市",open:false,children:[{name:"美国公司"}]}, {name:"美国城市",open:false,children:[{name:"美国公司"}]}]},
+   {name:"美国", open:true, children:[
+      {name:"美国城市",open:false,children:[{name:"美国公司"}]}, {name:"美国城市",open:false,children:[{name:"美国公司"}]}]}
+   ];
+   $(document).ready(function(){
+      zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+   });
+  </SCRIPT>
+
+ 
+</body>
+</html>
